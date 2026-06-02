@@ -3,6 +3,7 @@ package com.codingSuman.ecommerce.InventoryService.controller;
 
 import com.codingSuman.ecommerce.InventoryService.dto.ProductDto;
 import com.codingSuman.ecommerce.InventoryService.service.ProductService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
@@ -40,12 +41,12 @@ public class ProductController
     }
 
     @GetMapping("/fetchOrders")
-    public String fetchFromOrders()
+    public String fetchFromOrders(HttpServletRequest httpServletRequest)
     {
-        ServiceInstance orderService = discoveryClient.getInstances("OrderService").getFirst();
+        ServiceInstance orderService = discoveryClient.getInstances("ORDERSERVICE").getFirst();
 
         String response =  restClient.get()
-                .uri(orderService.getUri()+"/api/v1/orders/helloOrders")
+                .uri(orderService.getUri()+"/orders/core/helloOrders")
                 .retrieve()
                 .body(String.class);
 

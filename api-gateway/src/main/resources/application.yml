@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: OrderService
+          uri: lb://ORDERSERVICE
+          predicates:
+            - Path=/api/v1/orders/**
+          filters:
+            - StripPrefix=2
+            - RedirectTo=302, http://codingshuttle.com
+
+        - id: InventoryService
+          uri: lb://INVENTORYSERVICE
+          predicates:
+            - Path=/api/v1/inventory/products/**
+          filters:
+            - StripPrefix=2
+            - AddRequestHeader=X-Custom-Header, Suman
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

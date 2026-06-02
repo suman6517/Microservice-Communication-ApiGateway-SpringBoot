@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DiscoveryService" />
+        <module name="api-gateway" />
       </profile>
       <profile name="Annotation profile for OrderService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -21,6 +22,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway (1) (com.codingSuman.ecommerce)" target="21" />
       <module name="discovery-service" target="21" />
     </bytecodeTargetLevel>
   </component>
@@ -29,6 +31,8 @@
       <module name="DiscoveryService" options="-parameters" />
       <module name="InventoryService" options="-parameters" />
       <module name="OrderService" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="api-gateway (1) (com.codingSuman.ecommerce)" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
     </option>
   </component>
