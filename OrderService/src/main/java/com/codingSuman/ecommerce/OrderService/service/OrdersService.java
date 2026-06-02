@@ -7,6 +7,9 @@ import com.codingSuman.ecommerce.OrderService.entity.OrderItem;
 import com.codingSuman.ecommerce.OrderService.entity.OrderStatus;
 import com.codingSuman.ecommerce.OrderService.entity.Orders;
 import com.codingSuman.ecommerce.OrderService.repository.OrdersRepo;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -35,9 +38,13 @@ public class OrdersService
         return modelMapper.map(order, OrderRequestDto.class);
     }
 
+    // @Retry(name = "inventoryRetry" , fallbackMethod = "createOrderFallback")
+    @CircuitBreaker(name = "inventoryCircuitBreaker" , fallbackMethod = "createOrderFallback")
+    //@RateLimiter(name = "inventoryRateLimiter" , fallbackMethod = "createOrderFallback")
     public OrderRequestDto createOrder(OrderRequestDto orderRequestDto)
     {
-        Double totalPrice = inventoryOpenFeignClient.reduceStocks(orderRequestDto);
+        log.info("Calling The Create Order Method");
+        Double totalPrice = inventoryOpenFeignClient.reduceStocks(orderRequestDto); // Third Party Call
 
         Orders order = modelMapper.map(orderRequestDto, Orders.class);
 
@@ -51,5 +58,12 @@ public class OrdersService
 
         orderRepository.save(order);
         return modelMapper.map(order, OrderRequestDto.class);
+    }
+
+    public OrderRequestDto createOrderFallback(OrderRequestDto orderRequestDto , Throwable throwable)
+    {
+        log.error("Fallback occurred due to: {} ", throwable.getMessage());
+
+        return new OrderRequestDto();
     }
 }

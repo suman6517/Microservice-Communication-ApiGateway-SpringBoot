@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e14e06ef-9d3d-411a-be48-a3f3511cbc2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/clients/OrderFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/dto/OrderRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/dto/OrderRequestItemDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/InventoryServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/clients/OrderClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/cpntroller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/cpntroller/OrdersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/service/OrdersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,9 +133,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.InventoryServiceApplication" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       </list>
     </recent_temporary>
