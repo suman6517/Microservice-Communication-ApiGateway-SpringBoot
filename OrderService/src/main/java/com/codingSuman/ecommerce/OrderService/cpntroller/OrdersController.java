@@ -35,4 +35,9 @@ public class OrdersController
         OrderRequestDto order = ordersService.getOrderById(id);
         return ResponseEntity.ok(order);  // Returns 200 OK with the order
     }
+
+    @GetMapping("/helloOrders")
+    public String helloOrders() {
+        return "Helo From Order Service";
+    }
 }
