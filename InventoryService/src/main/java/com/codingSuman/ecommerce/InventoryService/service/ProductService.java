@@ -1,8 +1,11 @@
 package com.codingSuman.ecommerce.InventoryService.service;
 
+import com.codingSuman.ecommerce.InventoryService.dto.OrderRequestDto;
+import com.codingSuman.ecommerce.InventoryService.dto.OrderRequestItemDto;
 import com.codingSuman.ecommerce.InventoryService.dto.ProductDto;
 import com.codingSuman.ecommerce.InventoryService.entity.Product;
 import com.codingSuman.ecommerce.InventoryService.repository.ProductRepo;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -34,4 +37,28 @@ public class ProductService
                 .orElseThrow(() -> new RuntimeException("Inventory not found"));
     }
 
+    @Transactional
+    public Double reduceStocks(OrderRequestDto orderRequestDto)
+    {
+        log.info("Reducing stocks");
+        Double totalPrice=0.0;
+
+        for(OrderRequestItemDto orderRequestItemDto : orderRequestDto.getItems())
+        {
+            Long productId = orderRequestItemDto.getProductId();
+            Integer quantity = orderRequestItemDto.getQuantity();
+
+            Product product = productRepository.findById(productId).orElseThrow(() -> new RuntimeException("Product not found with ID: " + productId));
+
+            if(product.getStock() < quantity)
+            {
+                throw new RuntimeException("Stock exceeded");
+            }
+
+            product.setStock(product.getStock() - quantity);
+            totalPrice += quantity * product.getPrice();
+        }
+
+        return totalPrice;
+    }
 }

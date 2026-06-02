@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e14e06ef-9d3d-411a-be48-a3f3511cbc2e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/clients/OrderFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/dto/OrderRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/dto/OrderRequestItemDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscoveryService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DiscoveryService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/InventoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/clients/OrderClient.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/OrderServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/cpntroller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/cpntroller/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/service/OrdersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,27 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sumanbaral/Downloads/JavaWork/MicroServices-Lecture/Ecommerce&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
+    "Spring Boot.InventoryServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/sumanbaral/Downloads/JavaWork/MicroServices-Lecture/Ecommerce/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/dto",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/InventoryService/src/main/java/com/codingSuman/ecommerce/InventoryService/dto" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -134,8 +145,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       </list>
