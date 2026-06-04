@@ -29,7 +29,9 @@ public class LoggingOrdersFilter extends AbstractGatewayFilterFactory<LoggingOrd
     }
 
     public static class Config {
-        public Config() {
+        public Config()
+        {
+
         }
     }
 }

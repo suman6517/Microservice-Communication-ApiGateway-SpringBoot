@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e14e06ef-9d3d-411a-be48-a3f3511cbc2e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../FestVideo/eCommerce/logs/api-gateway/application-2024-09-27.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FestVideo/eCommerce/logs/api-gateway/application-2024-09-27.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FestVideo/eCommerce/logs/inventory-service/application-2024-09-27.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FestVideo/eCommerce/logs/inventory-service/application-2024-09-27.0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FestVideo/eCommerce/logs/order-service/application-2024-09-27.0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FestVideo/eCommerce/logs/order-service/application-2024-09-27.0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/cpntroller/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/src/main/java/com/codingSuman/ecommerce/OrderService/cpntroller/OrdersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/codingSuman/ecommerce/api_gateway/filters/LoggingOrdersFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/codingSuman/ecommerce/api_gateway/filters/LoggingOrdersFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
