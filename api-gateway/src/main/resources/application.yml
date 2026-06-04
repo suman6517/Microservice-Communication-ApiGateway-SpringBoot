@@ -11,6 +11,7 @@ spring:
             - Path=/api/v1/orders/**
           filters:
             - StripPrefix=2
+            - name: LoggingOrdersFilter
 #            - RedirectTo=302, http://codingshuttle.com
 
         - id: InventoryService
