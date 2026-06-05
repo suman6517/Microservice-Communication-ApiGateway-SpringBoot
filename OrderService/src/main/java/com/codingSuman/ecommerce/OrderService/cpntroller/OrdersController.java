@@ -6,6 +6,7 @@ import com.codingSuman.ecommerce.OrderService.service.OrdersService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,7 @@ import java.util.List;
 @RequestMapping("/core")
 @RequiredArgsConstructor
 @Slf4j
+@RefreshScope
 public class OrdersController
 {
     private final OrdersService ordersService;
@@ -35,10 +37,13 @@ public class OrdersController
         return ResponseEntity.ok(order);  // Returns 200 OK with the order
     }
 
+    //@RequestHeader("X-User-Id") Long userId
     @GetMapping("/helloOrders")
-    public String helloOrders(@RequestHeader("X-User-Id") Long userId)
+    public String helloOrders()
     {
-        return "Helo From Order Service , user Id id: "+userId;
+        int a = 5;
+        return "The Value of a is: "+a;
+        //return "Hello World!";
     }
 
     @PostMapping("/create-order")

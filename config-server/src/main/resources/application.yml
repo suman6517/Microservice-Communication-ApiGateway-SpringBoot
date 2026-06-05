@@ -1,0 +1,21 @@
+spring.application.name: config-server
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/suman6517/ecommerce-config-server
+          username: suman6517
+          password: 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
+          default-label: main
+
+server:
+  port: 8888
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#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
